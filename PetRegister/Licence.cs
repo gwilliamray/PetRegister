@@ -37,7 +37,7 @@ namespace PetRegister
                 // if it is a Dog
                 if(OwnerPet.GetType() == typeof(Dog))
                 {
-                    if (OwnerPet.Vaccination)
+                    if (OwnerPet.IsFixed)
                     {
                         Fee = 21.0m;
                     }
@@ -48,7 +48,7 @@ namespace PetRegister
                 }
                 else
                 {
-                    if (OwnerPet.Vaccination)
+                    if (OwnerPet.IsFixed)
                     {
                         Fee = 21.0m;
                     }
@@ -62,7 +62,7 @@ namespace PetRegister
             {
                 if (OwnerPet.GetType() == typeof(Dog))
                 {
-                    if (OwnerPet.Vaccination)
+                    if (OwnerPet.IsFixed)
                     {
                         Fee = 18.0m;
                     }
@@ -73,7 +73,7 @@ namespace PetRegister
                 }
                 else 
                 {
-                    if (OwnerPet.Vaccination)
+                    if (OwnerPet.IsFixed)
                     {
                         Fee = 18.0m;
                     }

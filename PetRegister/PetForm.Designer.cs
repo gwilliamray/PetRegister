@@ -41,13 +41,14 @@
             this.rdoDog = new System.Windows.Forms.RadioButton();
             this.rdoCat = new System.Windows.Forms.RadioButton();
             this.pnlDog = new System.Windows.Forms.Panel();
-            this.pnlCat = new System.Windows.Forms.Panel();
-            this.txtDogsJob = new System.Windows.Forms.TextBox();
-            this.chkSchool = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.chkDeclawed = new System.Windows.Forms.CheckBox();
-            this.cboFurType = new System.Windows.Forms.ComboBox();
+            this.chkSchool = new System.Windows.Forms.CheckBox();
+            this.txtDogsJob = new System.Windows.Forms.TextBox();
+            this.pnlCat = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
+            this.cboFurType = new System.Windows.Forms.ComboBox();
+            this.chkDeclawed = new System.Windows.Forms.CheckBox();
+            this.chkIsFixed = new System.Windows.Forms.CheckBox();
             this.pnlDog.SuspendLayout();
             this.pnlCat.SuspendLayout();
             this.SuspendLayout();
@@ -107,7 +108,7 @@
             // chkVaccinated
             // 
             this.chkVaccinated.AutoSize = true;
-            this.chkVaccinated.Location = new System.Drawing.Point(278, 123);
+            this.chkVaccinated.Location = new System.Drawing.Point(250, 123);
             this.chkVaccinated.Name = "chkVaccinated";
             this.chkVaccinated.Size = new System.Drawing.Size(80, 17);
             this.chkVaccinated.TabIndex = 9;
@@ -125,7 +126,7 @@
             // 
             // btnPetAction
             // 
-            this.btnPetAction.Location = new System.Drawing.Point(355, 305);
+            this.btnPetAction.Location = new System.Drawing.Point(386, 347);
             this.btnPetAction.Name = "btnPetAction";
             this.btnPetAction.Size = new System.Drawing.Size(75, 23);
             this.btnPetAction.TabIndex = 11;
@@ -135,7 +136,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(55, 305);
+            this.btnCancel.Location = new System.Drawing.Point(86, 347);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 12;
@@ -176,22 +177,14 @@
             this.pnlDog.Size = new System.Drawing.Size(200, 100);
             this.pnlDog.TabIndex = 15;
             // 
-            // pnlCat
+            // label4
             // 
-            this.pnlCat.Controls.Add(this.label5);
-            this.pnlCat.Controls.Add(this.cboFurType);
-            this.pnlCat.Controls.Add(this.chkDeclawed);
-            this.pnlCat.Location = new System.Drawing.Point(300, 175);
-            this.pnlCat.Name = "pnlCat";
-            this.pnlCat.Size = new System.Drawing.Size(200, 100);
-            this.pnlCat.TabIndex = 16;
-            // 
-            // txtDogsJob
-            // 
-            this.txtDogsJob.Location = new System.Drawing.Point(79, 19);
-            this.txtDogsJob.Name = "txtDogsJob";
-            this.txtDogsJob.Size = new System.Drawing.Size(100, 20);
-            this.txtDogsJob.TabIndex = 0;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(11, 26);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 13);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Dogs Job";
             // 
             // chkSchool
             // 
@@ -203,24 +196,31 @@
             this.chkSchool.Text = "Obediance School";
             this.chkSchool.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // txtDogsJob
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(11, 26);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 13);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Dogs Job";
+            this.txtDogsJob.Location = new System.Drawing.Point(79, 19);
+            this.txtDogsJob.Name = "txtDogsJob";
+            this.txtDogsJob.Size = new System.Drawing.Size(100, 20);
+            this.txtDogsJob.TabIndex = 0;
             // 
-            // chkDeclawed
+            // pnlCat
             // 
-            this.chkDeclawed.AutoSize = true;
-            this.chkDeclawed.Location = new System.Drawing.Point(48, 59);
-            this.chkDeclawed.Name = "chkDeclawed";
-            this.chkDeclawed.Size = new System.Drawing.Size(74, 17);
-            this.chkDeclawed.TabIndex = 0;
-            this.chkDeclawed.Text = "Declawed";
-            this.chkDeclawed.UseVisualStyleBackColor = true;
+            this.pnlCat.Controls.Add(this.label5);
+            this.pnlCat.Controls.Add(this.cboFurType);
+            this.pnlCat.Controls.Add(this.chkDeclawed);
+            this.pnlCat.Location = new System.Drawing.Point(300, 175);
+            this.pnlCat.Name = "pnlCat";
+            this.pnlCat.Size = new System.Drawing.Size(200, 100);
+            this.pnlCat.TabIndex = 16;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 22);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(45, 13);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Fur type";
             // 
             // cboFurType
             // 
@@ -235,20 +235,32 @@
             this.cboFurType.TabIndex = 1;
             this.cboFurType.SelectedIndexChanged += new System.EventHandler(this.cboFurType_SelectedIndexChanged);
             // 
-            // label5
+            // chkDeclawed
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 22);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 13);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Fur type";
+            this.chkDeclawed.AutoSize = true;
+            this.chkDeclawed.Location = new System.Drawing.Point(48, 59);
+            this.chkDeclawed.Name = "chkDeclawed";
+            this.chkDeclawed.Size = new System.Drawing.Size(74, 17);
+            this.chkDeclawed.TabIndex = 0;
+            this.chkDeclawed.Text = "Declawed";
+            this.chkDeclawed.UseVisualStyleBackColor = true;
+            // 
+            // chkIsFixed
+            // 
+            this.chkIsFixed.AutoSize = true;
+            this.chkIsFixed.Location = new System.Drawing.Point(348, 124);
+            this.chkIsFixed.Name = "chkIsFixed";
+            this.chkIsFixed.Size = new System.Drawing.Size(81, 17);
+            this.chkIsFixed.TabIndex = 17;
+            this.chkIsFixed.Text = "Is Neutered";
+            this.chkIsFixed.UseVisualStyleBackColor = true;
             // 
             // PetForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(602, 406);
+            this.Controls.Add(this.chkIsFixed);
             this.Controls.Add(this.pnlCat);
             this.Controls.Add(this.pnlDog);
             this.Controls.Add(this.rdoCat);
@@ -296,5 +308,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cboFurType;
         private System.Windows.Forms.CheckBox chkDeclawed;
+        private System.Windows.Forms.CheckBox chkIsFixed;
     }
 }

@@ -14,6 +14,8 @@ namespace PetRegister
         public string Sex { get; set; }
         public bool Vaccination { get; set; }
         public Customer PetOwner { get; set; }
+        public bool IsFixed { get; set; }
+
 
         public static int nextId = 5000;
         public Pet() { }

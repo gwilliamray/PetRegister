@@ -56,6 +56,7 @@ namespace PetRegister
                     bool school = chkSchool.Checked;
 
                     currentPet = new Dog(petName, breed, petSex, vaccination, currentCustomer, theJob,school);
+                    currentPet.IsFixed = chkIsFixed.Checked;
                 }
                 else
                 {
@@ -63,9 +64,10 @@ namespace PetRegister
                     bool declawed = chkDeclawed.Checked;
 
                     currentPet = new Cat(petName, breed, petSex, vaccination, currentCustomer, theFurType, declawed);
-
-
+                    currentPet.IsFixed = chkIsFixed.Checked;
                 }
+
+            
 
                 this.Close();
             }
