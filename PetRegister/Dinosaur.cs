@@ -9,6 +9,9 @@ namespace PetRegister
     class Dinosaur : Pet
     {
         //Needs lots of work
+		public string DinoType {get; set;}
+		
+		
 
     }
 }
