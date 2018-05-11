@@ -10,6 +10,7 @@ namespace PetRegister
     {
         //Needs lots of work
 		public string DinoType {get; set;}
+        public int NumberToes { get; set; }
 		
 		
 
