@@ -12,8 +12,11 @@ namespace PetRegister
 		public string DinoType {get; set;}
         public int NumberToes { get; set; }
         public int HasFur { get; set; }
-		
-		
+
+        public override string ToString()
+        {
+            return DinoType;
+        }
 
     }
 }
