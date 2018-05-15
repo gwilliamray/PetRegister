@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bird.cs" />
     <Compile Include="Cat.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="CustomerDA.cs" />
