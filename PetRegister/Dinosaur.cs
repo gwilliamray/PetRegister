@@ -9,12 +9,14 @@ namespace PetRegister
     class Dinosaur : Pet
     {
         //Needs lots of work
-        // THis is a small change
 		public string DinoType {get; set;}
         public int NumberToes { get; set; }
-        public bool HasFur { get; set; }
-		
-		
+      
+
+        public override string ToString()
+        {
+            return DinoType;
+        }
 
     }
 }
