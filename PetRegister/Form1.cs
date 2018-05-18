@@ -22,11 +22,11 @@ namespace PetRegister
         List<Licence> allLicence = new List<Licence>();
 
         Customer currentCustomer = null;
-
+        Customers ListofCustomers = new Customers();
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            ourCustomers = CustomerDA.GetAllCustomers();
+            ourCustomers = ListofCustomers.GetAllCustomers();
 
             DisplayCustomers();
             btnEditCustomer.Enabled = false;
@@ -53,6 +53,7 @@ namespace PetRegister
 
             if (aCustomer != null)
             {
+                ListofCustomers.AddCustomer(aCustomer);
                 ourCustomers.Add(aCustomer);
                 DisplayCustomers();
             }

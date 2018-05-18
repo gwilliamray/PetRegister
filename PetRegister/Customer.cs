@@ -36,8 +36,8 @@ namespace PetRegister
             DateOfBirth = birthday;
             Address = theAddress;
             Balance = 0.0m;
-            CustId = id;
-            id++;
+            //CustId = id;
+            //id++;
 
 
             
